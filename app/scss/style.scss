@@ -1,0 +1,254 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header{
+    position: relative;
+    background: rgba(255, 255, 255, 0.67);
+    &__inner{
+        display: flex;
+        justify-content: center;
+        height: 172px;
+        z-index: 10;
+    }
+    &__images{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 172px;
+            z-index: 20;
+    
+            background:rgba(255, 255, 255, 0.67);
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 10;
+    }
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12), inset 0px 12px 24px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.icons{
+    display: flex;
+    justify-content: right;
+    max-width: 836px;
+    margin-left: 300px;
+    img{
+        display: inline-block;
+        width: 24px;
+        height: 22px;
+        margin-left: 21px;
+        margin-top: 18px;
+        cursor: pointer;
+    }
+    img:hover{
+        border: 1px solid #3D8EDA;
+        border-radius: 2px; 
+    }
+}
+
+.info{
+    margin-top: 33px;
+    margin-left: 86px;
+    padding-right: 12px;
+    &__title{
+        display: flex;
+    }
+    &__title p{
+        padding: 12px 12px 7px 12px;
+        color: #3D8EDA;
+        margin-left: 16px;
+        font-weight: 400;
+        font-size: 13px;
+        border: 1px solid #3D8EDA;
+        border-radius: 2px;
+    }
+    &__title h1 {
+        font-family: 'Montserrat', sans-serif;
+    }
+    &__statick{
+        margin-top: 16px;
+        display: flex;
+    }
+    &__statick p{
+        margin-right: 28px;
+    }
+    &__calendar{
+        display: flex;
+        margin-top: 19px;
+    }
+    &__calendar input{
+        margin-right: 27px;
+    }
+}
+
+.list{
+    width: 100%;
+    margin-top: 23px;
+    position: relative;
+    &__info{
+        width: 720px;
+        display: flex;
+    }
+}
+
+.list[data-temp="grid"] {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .list__item{ 
+        position: relative;
+        flex-direction: column;
+        width: 200px;
+        margin: 0 4px 34px;
+    }
+    img {
+        width: 100%;
+    }
+    .list__info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 12px;
+        margin-left: 12px;
+        padding-right: 12px;
+    }
+    .list__data {
+        margin: 0;
+    }
+    .today, .yesterday {
+        width: 50%;
+        &, .today__like, .yesterday__like {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 15px;
+            margin: 0;
+        }
+        .stats {
+            width: 100%;
+            display: flex;
+            margin-bottom: 9px;
+        }
+    }
+    .information {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 16px;
+        padding-right: 11px;
+    }
+}
+
+.list__item{
+    display: flex;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.today{
+    margin-left: 30px;
+    margin-top: 16px;
+    &__title{
+        font-size: 16px;
+    }
+    &__like{
+        display: flex;
+        margin-top: 9px;
+    }
+    &__like p {
+        margin-left: 7px;
+    }
+    .repost{
+        margin-left: 20px;
+    }
+}
+
+.yesterday{
+    margin-left: 161px;
+    margin-top: 16px;
+    &__like{
+        display: flex;
+        margin-top: 9px;
+    }
+    &__like p{
+        margin-left: 7px;
+    }
+    &__data{
+        font-size: 16px;
+    }
+    .repost{
+        margin-left: 28px;
+    }
+}
+
+.stats{
+    display: flex;
+    align-items: center;
+}
+
+.information{
+    font-size: 14px;
+    margin-left: 168px;
+    margin-top: 16px;
+    p{
+        margin-top: 9px;
+    }
+}
+
+.like {
+    width: 15px;
+    height: 14px;
+}
+.repost{
+    width: 15px;
+    height: 15px;
+}
+
+.btn{
+    button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 61px;
+    margin-bottom: 61px;
+    padding: 8px 26px;
+    font-size: 11px;
+    color: #929292;
+    border: 1px solid #929292;
+    border-radius: 14px;
+    cursor: pointer;
+    background-color: white;
+    } 
+}
+
+.footer_image{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+}
+
+@import 'media';
