@@ -103,12 +103,15 @@
 }
 
 .list{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 23px;
     position: relative;
     &__info{
-        width: 720px;
+        width: 100%;
         display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -163,13 +166,14 @@
 }
 
 .list__item{
+    width: 100%;
     display: flex;
     margin-bottom: 8px;
     position: relative;
 }
 
 .today{
-    margin-left: 30px;
+    margin-left: 5%;
     margin-top: 16px;
     &__title{
         font-size: 16px;
@@ -187,7 +191,7 @@
 }
 
 .yesterday{
-    margin-left: 161px;
+    // margin-left: 161px;
     margin-top: 16px;
     &__like{
         display: flex;
@@ -211,7 +215,7 @@
 
 .information{
     font-size: 14px;
-    margin-left: 168px;
+    // margin-left: 168px;
     margin-top: 16px;
     p{
         margin-top: 9px;
@@ -249,7 +253,6 @@
     right: 0;
     bottom: 0;
     z-index: 0;
-
 }
 
 @import 'media';
